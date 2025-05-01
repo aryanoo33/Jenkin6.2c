@@ -64,8 +64,8 @@ pipeline {
         always {
             script {
                 echo 'Sending email...'
-                echo 'Tool Used: Jenkins Mailer Plugin'
-                mail (
+                echo 'Tool Used: Email Extension Plugin'
+                emailext(
                     subject: "Pipeline Notification: ${JOB_NAME} - Build #${BUILD_NUMBER}",
                     body: "The pipeline has completed. Check details at: ${BUILD_URL}",
                     to: 'aryan4768.be23@chitkara.edu.in'
